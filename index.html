@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>JOJOLAND – Информационный сайт</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Сброс стилей (нормалайзер) – можно добавить, если хотите -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <!-- Ваши стили -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- ===== ХЕДЕР ===== -->
+    <header class="header">
+        <img src="assets/logo.svg" alt="Логотип JOJOLAND" class="logo">
+        <h1 class="site-title">JOJOLAND</h1>
+        <button class="theme-toggle" aria-label="Переключить тёмную/светлую тему">🌙</button>
+    </header>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="nav">
+        <ul>
+            <li><a href="#rules-server">Правила сервера</a></li>
+            <li><a href="#rules-channel">Правила канала</a></li>
+            <li><a href="#admins">Администрация</a></li>
+        </ul>
+    </nav>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="main">
+        <!-- Правила сервера -->
+        <section id="rules-server" class="card">
+            <h2>Правила сервера</h2>
+            <ul>
+                <li>Пункт 1…</li>
+                <li>Пункт 2…</li>
+                <li>Пункт 3…</li>
+            </ul>
+        </section>
+
+        <!-- Правила канала -->
+        <section id="rules-channel" class="card">
+            <h2>Правила ТКГ‑канала</h2>
+            <ul>
+                <li>Пункт A…</li>
+                <li>Пункт B…</li>
+                <li>Пункт C…</li>
+            </ul>
+        </section>
+
+        <!-- Администраторы -->
+        <section id="admins" class="card">
+            <h2>Администрация</h2>
+            <div class="admin-list">
+                <!-- Пример карточки админа -->
+                <div class="admin">
+                    <img src="assets/avatar1.png" alt="Admin 1">
+                    <p><strong>Имя Фамилия</strong><br>Должность</p>
+                </div>
+                <!-- Добавляйте столько, сколько нужно -->
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        © 2026 JOJOLAND. Все права защищены.
+    </footer>
+
+    <!-- Ваши скрипты -->
+    <script src="script.js"></script>
+</body>
+</html>
