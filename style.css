@@ -1,0 +1,169 @@
+/* ===== БАЗОВЫЕ НАСТРОЙКИ ===== */
+:root {
+    --clr-primary: #ff5e5e;            /* основной «красный» */
+    --clr-bg-light: #f9fafd;
+    --clr-bg-dark: #1c1e26;
+    --clr-text-light: #2e3440;
+    --clr-text-dark: #d8dee9;
+    --font-main: 'Montserrat', sans-serif;
+}
+
+/* Тёмная тема (по умолчанию – светлая) */
+[data-theme="dark"] {
+    --clr-bg: var(--clr-bg-dark);
+    --clr-text: var(--clr-text-dark);
+}
+
+/* Светлая тема */
+[data-theme="light"] {
+    --clr-bg: var(--clr-bg-light);
+    --clr-text: var(--clr-text-light);
+}
+
+/* Переходим к текущей теме */
+html {
+    background-color: var(--clr-bg);
+    color: var(--clr-text);
+    font-family: var(--font-main);
+    line-height: 1.6;
+    scroll-behavior: smooth;   /* плавный скролл к якорям */
+}
+
+/* ===== RESET/COMMON ===== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== HEADER ===== */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+    background: linear-gradient(135deg, var(--clr-primary) 0%, #ff8a8a 100%);
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* Анимированный логотип */
+.logo {
+    width: 64px;
+    height: 64px;
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Пульсирующее вращение */
+@keyframes float {
+    0%   { transform: rotate(0deg) scale(1); }
+    50%  { transform: rotate(10deg) scale(1.07); }
+    100% { transform: rotate(0deg) scale(1); }
+}
+
+/* Название сайта */
+.site-title {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* Кнопка темы */
+.theme-toggle {
+    background: transparent;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+/* ===== NAVIGATION ===== */
+.nav {
+    background: var(--clr-bg);
+    padding: 0.5rem 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+.nav a {
+    text-decoration: none;
+    color: var(--clr-text);
+    font-weight: 500;
+    transition: color .2s;
+}
+.nav a:hover {
+    color: var(--clr-primary);
+}
+
+/* ===== MAIN / CARD ===== */
+.main {
+    display: grid;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Каждая секция выглядит как карточка */
+.card {
+    background: var(--clr-bg);
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,.05);
+    transition: transform .2s, box-shadow .2s;
+}
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,.1);
+}
+.card h2 {
+    margin-bottom: 1rem;
+    color: var(--clr-primary);
+}
+
+/* Список администраторов */
+.admin-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.admin {
+    text-align: center;
+    width: 120px;
+}
+.admin img {
+    width: 100%;
+    border-radius: 50%;
+    border: 3px solid var(--clr-primary);
+}
+.admin p {
+    margin-top: .5rem;
+    font-size: .9rem;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: .85rem;
+    color: var(--clr-text);
+    background: var(--clr-bg);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .nav ul {
+        flex-direction: column;
+        gap: .5rem;
+    }
+    .main {
+        padding: 1rem;
+    }
+}
